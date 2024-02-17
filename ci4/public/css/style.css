@@ -1,0 +1,216 @@
+  body {
+    background-color: black;
+    color: white;
+    font-family: Open Sans;
+    display: flex;
+    flex-direction: column;
+	margin: 0;
+  }
+  .musicians-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+  }
+
+  .musician {
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  .musician img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+  }
+nav {
+	background: #0082e6;
+	height: 80px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	}
+nav ul {
+	float: right;
+	margin-right: 20px;
+	}
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+	}
+nav ul li a {
+	color: white;
+	font-size: 17px;
+	padding: 7px 90px;
+	border-radius: 3px;
+	text-transform: uppercase;
+	}
+a.active,a:hover {
+	background: #1b9bff;
+	transition: .5s;
+	}
+.checkbtn {
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	curspr: pointer;
+	}
+#check {
+	display: none;
+	}
+@media (max-width: 9858px) {
+	label.logo {
+	padding-left: 50px;
+	}
+	nav ul li a {
+	font-size: 16px;
+	}
+}
+@media (max-width: 858px) {
+	.checkbtn {
+	display: block;
+	}
+	ul {
+	postiion: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #2c3e50;
+	top: 80px;
+	left: -100%;
+	text-align: center;
+	transition: all .5s;
+	}
+	nav ul li {
+	display: block;
+	margin: 50px 0;
+	line-height: 30px;
+	}
+	nav ul li a {
+	font-size: 20px;
+	}
+	a:hover,a.active {
+	background: none;
+	color: #0082e6;
+	}
+	#check: checked ~ ul {
+	left:0;
+	}
+} 
+.content {
+    padding: 20px;
+    margin-top: 100px;
+    transition: margin-top 0.5s;
+
+  }
+p, li {
+    color: white;
+  }
+h1, h2 {
+    text-align: center;
+  }
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: white;
+  }
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+tr:nth-child(even) {
+    background-color: #333333;
+  }
+
+#profile-intro {
+    display: flex;
+    align-items: center;
+    background-color: blue;
+    border: 2px solid white;
+    padding: 20px;
+}
+#profile-intro img{
+    width: 250px;
+	height: 250px;
+    margin-right: 20px;
+	margin-left: 180px;
+	float: right;
+   }
+#profile-text{
+	flex: 1;
+	
+	}
+#profile-intro p {
+	margin: 0;
+	float: right;
+	}
+#hobbies {
+	background-color: #074f57;
+	background-image: url("paletepall.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white:
+	padding-top: 200px;
+	padding-bottom: 200px;
+	}
+
+
+.center-content {
+    text-align: center;
+  }
+
+.image-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+.image-container img {
+    margin: 0 10px;
+  }
+
+.toggle-btn {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  * {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  }
+.places-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  }
+
+.place-container {
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+  }
+
+.place-container:hover {
+  transform: scale(1.1);
+  }
+
+.place-container img {
+   width: 500px;
+   height: 400px;
+   border-radius: 30px;
+   transition: transform 0.3s;
+  }
+
+.place-container:hover img {
+   transform: scale(1.1);
+  }
