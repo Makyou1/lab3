@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <!-- Link to your CSS file -->
-    <link rel="stylesheet" href="<?php echo base_url('public/css/style.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('lab3/ci4/public/css/style.css'); ?>">
+	<script src="<?php echo base_url('lab3/ci4/public/js/mainmain.js'); ?>"></script>
 </head>
 <body>
 
