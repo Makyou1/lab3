@@ -1,32 +1,33 @@
-!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <!-- Link to your CSS file -->
-    <link rel="stylesheet" href="<?php echo base_url('lab3/ci4/public/css/style.css'); ?>">
-	<script src="<?php echo base_url('lab3/ci4/public/js/mainmain.js'); ?>"></script>
+<!DOCTYPE html>
+<html lang="en-us">
+        <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Justin Clark Ong">
+		<meta name="description" content="All about me!">
+                <title>Home</title>
+		<link href="images/favicon.ico" rel=icon>
+		<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-
 <nav>
-<div class="navbar">
-<input type="checkbox" id="check">
-<label for="check" class="checkbtn"> 
-<i class="fas fa-bars"></i>
-</label>
-<label class="logo">
-<img src="paletpal_logo.jpg" style="width: 70px; height: 80px; margin-left: 5px; margin-top: 0px;" alt="Logo of Website">
-<ul>
-<li><a class="active" href="#profile-intro">Introduction</a></li>
-<li><a href="#personal-info">Personal Information</a></li>
-<li><a href="#hobbies">Hobbies</a></li>
-<li><a href="#travel-log">Travel log</a></li>
-<li><a href="#art">Art that I'm into</a></li>
-
-</div>
+    <div class="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"> 
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">
+             <img src="images/paletpal_logo.jpg" style="width: 70px; height: 80px; margin-left: 5px; margin-top: 0px;" alt="Logo of Website">
+        </label>
+        <ul>
+            <li><a class="active" href="#profile-intro">Introduction</a></li>
+            <li><a href="#personal-info">Personal Information</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#travel-log">Travel log</a></li>
+            <li><a href="#art">Art that I'm into</a></li>
+        </ul>
+    </div>
 </nav>
 
 <div class="content">
@@ -37,7 +38,7 @@
 <h1 style="color:#00bfff;">Marc Nerez Personal Profile</h1>
 <h2 style="color:#00bfff;"><strong>Introduction</strong></h2>
 <div id="profile-intro">
-	<img src="ART AND THE ARTIST.jpg" alt="art vs artist picture">
+	<img src="images/ART AND THE ARTIST.jpg" alt="art vs artist picture">
 <?php  
 $x = '<p>This is the very first time I\'m attempting to do a website. I hope it works out! <br>';
 $x .= 'My name is <strong>Marc Angelo A. Nerez</strong>, as stated above, I am <strong>34 years old</strong>. This is my 2nd course, and I\'m eager to learn more about developing programs.<br>';
@@ -175,34 +176,34 @@ myfunction();
   <p style="text-align: center;" id="currentdate"></p>
   <br>
   <h1 style="color:#00bfff;">Unforgettable Places I've Visited</h1> <br>
-<div class="places-container">
-<?php
-$places = array(
-  "Los Angeles, California" => "Losangeles.jpg",
-  "Melbourne, Australia" => "Melbourne.JPG",
-  "Niagara, New York" => "Niagara.jpg",
-  "New York, New York" => "Newyork.jpg",
-  "Las Vegas, Nevada" => "Lasvegas.jpg",
-  "Atlantic City, New Jersey" => "Newjersey.jpg"
-);
+  <div class="places-container">
+    <?php
+    $places = array(
+      "Los Angeles, California" => '<img src="images/Losangeles.jpg" alt="Los Angeles, California">',
+      "Melbourne, Australia" => '<img src="images/Melbourne.JPG" alt="Melbourne, Australia">',
+      "Niagara, New York" => '<img src="images/Niagara.jpg" alt="Niagara, New York">',
+      "New York, New York" => '<img src="images/Newyork.jpg" alt="New York, New York">',
+      "Las Vegas, Nevada" => '<img src="images/Lasvegas.jpg" alt="Las Vegas, Nevada">',
+      "Atlantic City, New Jersey" => '<img src="images/Newjersey.jpg" alt="Atlantic City, New Jersey">'
+    );
 
     foreach ($places as $place => $image) {
       echo '<div class="place-container">';
-      echo '<img src="' . $image . '" alt="' . $place . '">';
+      echo $image;
       echo '<p>' . $place . '</p>';
       echo '</div>';
     }
     ?>
-</div>
+  </div>
 </div>
 <h1 id="art" style="color:#00bfff;"><strong>Art that I'm into (click the name to reveal their art)</strong></h1> <br>
 <h2 style="color:white;">Visual Arts</h2> <br>
 <div class="center-content">
   <p style="font-size: 30px; cursor: pointer;" onclick="toggleImages('jorgeJimenez')"><strong>Jorge Jimenez</strong></p> <br>
   <div class="image-container" id="jorgeJimenez">
-    <img src="Jorge jimenez.jpg" width="600" height="400" alt="Batman comics Characters">
-    <img src="jorge jimenez2.jpg" width="600" height="400" alt="Justice league charging">
-    <img src="jorge jimenez3.jpeg" width="600" height="400" alt="Current Justice league vs future justice league">
+    <img src="images/Jorge jimenez.jpg" width="600" height="400" alt="Batman comics Characters">
+    <img src="images/jorge jimenez2.jpg" width="600" height="400" alt="Justice league charging">
+    <img src="images/jorge jimenez3.jpeg" width="600" height="400" alt="Current Justice league vs future justice league">
   </div> <br>
   <p><cite>DC 2 page spread illustrations by </cite>Jorge Jimenez.</p> <br>
 </div>
@@ -210,9 +211,9 @@ $places = array(
 <div class="center-content">
   <p style="font-size: 30px; cursor: pointer;" onclick="toggleImages('scottWalter')"><strong>Scott Walter AKA Miniac</strong></p> <br>
   <div class="image-container" id="scottWalter">
-    <img src="miniac1.jpg" width="600" height="700" alt="Eldar Miniature">
-    <img src="miniac2.jpg" width="600" height="700" alt="Skeleton Warrior Miniature">
-    <img src="miniac3.jpg" width="600" height="700" alt="Human Priestess Miniature">
+    <img src="images/miniac1.jpg" width="600" height="700" alt="Eldar Miniature">
+    <img src="images/miniac2.jpg" width="600" height="700" alt="Skeleton Warrior Miniature">
+    <img src="images/miniac3.jpg" width="600" height="700" alt="Human Priestess Miniature">
   </div> <br>
   <p><cite>Miniatures painted by Scott Walter posted on his Instagram (<a href="https://www.instagram.com/miniacal_/" target="_blank">link</a>)</cite></p> <br>
 </div>
@@ -220,9 +221,9 @@ $places = array(
 <div class="center-content">
   <p style="font-size: 30px; cursor: pointer;" onclick="toggleImages('emilNystrom')"><strong>Emil Nyström AKA Squidmar miniatures</strong></p> <br>
   <div class="image-container" id="emilNystrom">
-    <img src="squidmar1.jpg" width="600" height="700" alt="Orc Miniature">
-    <img src="squidmar2.jpg" width="600" height="700" alt="Skeleton Warrior Miniature">
-    <img src="squidmar3.jpg" width="600" height="700" alt="Human Priestess Miniature">
+    <img src="images/squidmar1.jpg" width="600" height="700" alt="Orc Miniature">
+    <img src="images/squidmar2.jpg" width="600" height="700" alt="Skeleton Warrior Miniature">
+    <img src="images/squidmar3.jpg" width="600" height="700" alt="Human Priestess Miniature">
   </div> <br>
   <p><cite>Miniatures painted by Emil Nyström posted on his Instagram (<a href="https://www.instagram.com/squidmarminiatures/" target="_blank">link</a>)</cite></p>
 </div> <br>
@@ -232,7 +233,7 @@ $places = array(
 </div> <br>
 
 <h1 id="music" style="color:#00bfff;"><strong>Music</strong></h1> <br>
-
+<script src="js/music.js"></script>
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
@@ -292,6 +293,7 @@ function test_input($data) {
 
 <h2>Leave a comment on what you think of my website so far!!</h2> <br>
 <div style="text-align: center;">
+
   <p><span class="error">* required field</span></p> <br>
   <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
     Name: <input type="text" name="name" value="<?php echo $name;?>">
@@ -327,7 +329,102 @@ echo $comment;
 echo "<br>";
 echo $gender;
 ?>
-    <!-- Link to your JavaScript file -->
-    <script src="<?php echo base_url('public/js/main.js'); ?>"></script>
+<script>
+const musicians = [
+    { name: 'Mayer Hawthorne', image: 'images/Mayerhawthorne.jpg' },
+    { name: 'Bruno Mars', image: 'images/bruno.jpg' },
+    { name: 'Mac Miller', image: 'images/macmiller.jpg' },
+    { name: 'Tuxedo', image: 'images/tuxedo.jpg' },
+    { name: '2pac', image: 'images/tupac.jpg' },
+    { name: 'Joyner Lucas', image: 'images/Joynerlucas.jpg' }
+];
+
+  function createMusicians() {
+    const container = document.createElement('div');
+    container.className = 'musicians-container';
+
+    musicians.forEach(musician => {
+      const musicianElement = document.createElement('div');
+      musicianElement.className = 'musician';
+
+      const imageElement = document.createElement('img');
+      imageElement.src = musician.image;
+      imageElement.alt = musician.name;
+
+      const nameElement = document.createElement('p');
+      nameElement.textContent = musician.name;
+
+      musicianElement.appendChild(imageElement);
+      musicianElement.appendChild(nameElement);
+      container.appendChild(musicianElement);
+    });
+
+    document.body.appendChild(container);
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    createMusicians();
+
+    const navbar = document.querySelector('.navbar');
+    const checkBtn = document.getElementById('check');
+
+    checkBtn.addEventListener('change', function () {
+      navbar.style.display = checkBtn.checked ? 'flex' : 'none';
+    });
+
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          if (targetId === 'profile-intro') {
+            delayedAlert();
+          }
+
+          window.scrollTo({
+            top: targetElement.offsetTop - navbar.offsetHeight,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    const d = new Date();
+    document.getElementById("currentdate").innerHTML = d;
+
+    let answer1 = "You";
+    let answer2 = " are viewing my Website";
+    let answer3 = ' at this specific date and time';
+
+    document.getElementById("demo").innerHTML +=
+      "<br>" + answer1 + answer2 + answer3;
+
+  });
+
+  function toggleImages(artistId) {
+    var imageContainer = document.getElementById(artistId);
+    if (imageContainer.style.display === 'none') {
+      imageContainer.style.display = 'block';
+    } else {
+      imageContainer.style.display = 'none';
+    }
+  }
+
+  var buttonPressed = false;
+
+  function delayedAlert() {
+    if (!buttonPressed) {
+      setTimeout(function () {
+        alert('Hello');
+        buttonPressed = true;
+      }, 3000);
+    } else {
+      alert('Hello again');
+    }
+  }
+</script>
 </body>
 </html>
