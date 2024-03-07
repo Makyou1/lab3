@@ -4,7 +4,7 @@
 	
 	<form action="../guests" method="post">
 	    <?= csrf_field() ?>
-            <h2>Sign the Guest Book!</h2>
+            <h2 style="font-family: 'Roboto', sans-serif;">Give me the details ma good men</h2>
             Name: <input type="text" name="name" value="<?= set_value('name') ?>">
             <br><br>
             E-mail: <input type="text" name="email" value="<?= set_value('email') ?>">
@@ -19,6 +19,6 @@
             <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other
             <br><br>
 
-	    <input type="submit" name="submit" value="Create guest item">
+	    <input type="submit" name="submit" value="Submit!">
 	</form>
 </article>
