@@ -68,7 +68,7 @@ class Guests extends BaseController
         // Gets the validated data.
         $post = $this->request->getPost();
 
-        $model = new GuestsModel(); // Instantiate the GuestsModel class
+        $model = new GuestModel(); // Instantiate the GuestsModel class
 
         $model->save([
             'name' => $post['name'],
