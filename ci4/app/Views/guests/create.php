@@ -1,3 +1,5 @@
+
+<link rel="stylesheet" href="css/style.css">
 <article class="center">
 	<?= session()->getFlashdata('error') ?>
 	<?= validation_list_errors() ?>
