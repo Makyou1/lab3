@@ -1,7 +1,7 @@
   body {
     background-color: black;
     color: white;
-    font-family: Open Sans;
+    font-family: Georgia, serif;
     display: flex;
     flex-direction: column;
 	margin: 0;
@@ -48,7 +48,8 @@ nav ul li a {
 	border-radius: 3px;
 	text-transform: uppercase;
 	}
-a.active,a:hover {
+a.active,
+a:hover {
 	background: #1b9bff;
 	transition: .5s;
 	}
@@ -58,7 +59,7 @@ a.active,a:hover {
 	float: right;
 	line-height: 80px;
 	margin-right: 40px;
-	curspr: pointer;
+	cursor: pointer;
 	}
 #check {
 	display: none;
@@ -153,15 +154,27 @@ tr:nth-child(even) {
 	float: right;
 	}
 #hobbies {
-	background-color: #074f57;
-	background-image: url("paletepall.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	color: white:
-	padding-top: 200px;
-	padding-bottom: 200px;
-	}
+	margin-bottom: 20px;
+    background-color: #074f57;
+    background-image: url("images/paletepall.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* or specify dimensions like background-size: 50% 50%; */
+    color: white;
+}
 
+.enlarged-image {
+    max-width: 100%;
+    max-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 9999;
+    cursor: zoom-out;
+}
 
 .center-content {
     text-align: center;
@@ -178,7 +191,7 @@ tr:nth-child(even) {
   }
 
 .toggle-btn {
-    font-size: 24px;
+    font-size: 15px;
     cursor: pointer;
   }
   * {

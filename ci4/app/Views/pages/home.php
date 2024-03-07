@@ -3,7 +3,7 @@
         <head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="author" content="Justin Clark Ong">
+		<meta name="author" content="Marc Angelo Nerez">
 		<meta name="description" content="All about me!">
                 <title>Home</title>
 		<link href="images/favicon.ico" rel=icon>
@@ -38,21 +38,13 @@
 <h1 style="color:#00bfff;">Marc Nerez Personal Profile</h1>
 <h2 style="color:#00bfff;"><strong>Introduction</strong></h2>
 <div id="profile-intro">
-	<img src="images/ART AND THE ARTIST.jpg" alt="art vs artist picture">
-<?php  
-$x = '<p>This is the very first time I\'m attempting to do a website. I hope it works out! <br>';
-$x .= 'My name is <strong>Marc Angelo A. Nerez</strong>, as stated above, I am <strong>34 years old</strong>. This is my 2nd course, and I\'m eager to learn more about developing programs.<br>';
-$x .= 'I have two kids and I\'m currently working as a <em>Customer Relations Manager</em> for a security agency. My work includes traveling locally if needed.<br>';
-$x .= 'Previously, I was a <em>Sales Professional</em> for <em>Makati Ford</em>, and before that, I was a <em>Citiphone Officer</em> for <em>Citibank BGC</em>.<br>';
-$x .= 'I\'m from <em>Baguio City</em>!</p>';
-
-function myfunction() {
-	global $x;
-	echo $x;
-}
-
-myfunction();
-?>
+	<img id="artImage" src="images/ART AND THE ARTIST.jpg" alt="art vs artist picture" onclick="toggleEnlarged()">
+<p>This is the very first time I'm attempting to do a website. I hope it works out! <br><br>
+My name is <strong>Marc Angelo A. Nerez</strong>, as stated above, I am <strong>34 years old</strong>. This is my 2nd course, and I'm eager to learn more about developing programs.<br><br>
+I have two kids and I'm currently working as a <em>Customer Relations Manager</em> for a security agency. My work includes traveling locally if needed.<br><br>
+Previously, I was a <em>Sales Professional</em> for <em>Makati Ford</em>, and before that, I was a <em>Citiphone Officer</em> for <em>Citibank BGC</em>.<br><br>
+I'm from <em>Baguio City</em>!</p>
+	</div>
 	</div>
 	
 <h1 id="personal-info" style="color:#00bfff;"><strong>Personal Information</strong></h1> <br>
@@ -229,11 +221,68 @@ myfunction();
 </div> <br>
 
 <div class="center-content">
-  <p style="font-size: 30px; cursor: pointer;" onclick="this.innerHTML='Coming soon-ish'"><strong>Marc Angelo A. Nerez</strong></p> <br>
-</div> <br>
-
+  <p style="font-size: 30px; cursor: pointer;" onclick="toggleImages('MarcNerez')"><strong>Marc Angelo Nerez</strong></p> <br>
+  <div class="image-container" id="MarcNerez">
+    <img src="images/1.jpg" width="600" height="700" alt="Dinobot lol">
+    <img src="images/2.jpg" width="600" height="700" alt="Pirate mini">
+    <img src="images/3.jpg" width="600" height="700" alt="Warrior">
+	<img src="images/4.jpg" width="600" height="700" alt="conquistador?">
+    <img src="images/5.jpg" width="600" height="700" alt="Good demon?">
+    <img src="images/6.jpg" width="600" height="700" alt="Witch hunter">
+	<img src="images/7.jpg" width="600" height="700" alt="Dwarf">
+    <img src="images/8.jpg" width="600" height="700" alt="Gooblin">
+	<img src="images/9.jpg" width="600" height="700" alt="Witch elf">
+    <img src="images/10.jpg" width="600" height="700" alt="Dwarf king">
+    <img src="images/11.jpg" width="600" height="700" alt="Inquisitor?">
+	<img src="images/12.jpg" width="600" height="700" alt="Night elf">
+    <img src="images/13.jpg" width="600" height="700" alt="Tau Saurus">
+    <img src="images/14.jpg" width="600" height="700" alt="Repair bot">
+	<img src="images/15.jpg" width="600" height="700" alt="Overwhelmed">
+    <img src="images/16.jpg" width="600" height="700" alt="Mounted">
+	<img src="images/17.jpg" width="600" height="700" alt="Reavers">
+    <img src="images/18.jpg" width="600" height="700" alt="Venom">
+    <img src="images/19.jpg" width="600" height="700" alt="Launchers">
+	<img src="images/20.jpg" width="600" height="700" alt="soldiers">
+    <img src="images/21.jpg" width="600" height="700" alt="cops">
+  </div> <br>
+  
 <h1 id="music" style="color:#00bfff;"><strong>Music</strong></h1> <br>
-<script src="js/music.js"></script>
+<div class="center-content">
+  <p style="font-size: 30px; cursor: pointer;" onclick="toggleImages('Brunomars')"><strong>Bruno Mars</strong></p> <br>
+  <div class="image-container" id="Brunomars">
+	<img src="images/bruno.jpg" width="300" height="300" alt="Bruno pic">
+    <img src="images/bruno1.gif" width="300" height="300" alt="Bruno dance 1">
+    <img src="images/bruno2.gif" width="300" height="300" alt="Bruno dance 2">
+	<img src="images/bruno3.gif" width="300" height="300" alt="Bruno dance 3">
+  </div> <br>
+  
+<div class="center-content">
+  <p style="font-size: 30px; cursor: pointer;" onclick="toggleImages('MacMiller')"><strong>Mac Miller</strong></p> <br>
+  <div class="image-container" id="MacMiller">
+	<img src="images/macmiller.jpg" width="300" height="300" alt="Mac pic">
+    <img src="images/mac1.gif" width="300" height="300" alt="Mac dance 1">
+    <img src="images/mac2.gif" width="300" height="300" alt="Mac dance 2">
+	<img src="images/mac3.gif" width="300" height="300" alt="Mac dance 3">
+  </div> <br>
+
+<div class="center-content">
+  <p style="font-size: 30px; cursor: pointer;" onclick="toggleImages('TupacShakur')"><strong>Tupac Shakur</strong></p> <br>
+  <div class="image-container" id="TupacShakur">
+	<img src="images/pac2.jpg" width="300" height="300" alt="Pac pic">
+    <img src="images/pac1.gif" width="300" height="300" alt="Pac dance 1">
+    <img src="images/pac2.gif" width="300" height="300" alt="Pac dance 2">
+	<img src="images/pac3.gif" width="300" height="300" alt="Pac dance 3">
+  </div> <br>
+  
+<div class="center-content">
+  <p style="font-size: 30px; cursor: pointer;" onclick="toggleImages('MayerHawthorne')"><strong>Mayer Hawthorne</strong></p> <br>
+  <div class="image-container" id="MayerHawthorne">
+	<img src="images/Mayer.jpg" width="300" height="300" alt="Mayer pic">
+    <img src="images/Mayer1.gif" width="300" height="300" alt="Mayer dance 1">
+    <img src="images/Mayer2.gif" width="300" height="300" alt="Mayer dance 2">
+	<img src="images/Mayer3.gif" width="300" height="300" alt="Mayer dance 3">
+  </div> <br>
+
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
@@ -330,15 +379,6 @@ echo "<br>";
 echo $gender;
 ?>
 <script>
-const musicians = [
-    { name: 'Mayer Hawthorne', image: 'images/Mayerhawthorne.jpg' },
-    { name: 'Bruno Mars', image: 'images/bruno.jpg' },
-    { name: 'Mac Miller', image: 'images/macmiller.jpg' },
-    { name: 'Tuxedo', image: 'images/tuxedo.jpg' },
-    { name: '2pac', image: 'images/tupac.jpg' },
-    { name: 'Joyner Lucas', image: 'images/Joynerlucas.jpg' }
-];
-
   function createMusicians() {
     const container = document.createElement('div');
     container.className = 'musicians-container';
@@ -412,6 +452,11 @@ const musicians = [
       imageContainer.style.display = 'none';
     }
   }
+  
+  function toggleEnlarged() {
+   var img = document.getElementById('artImage');
+   img.classList.toggle('enlarged-image');
+  }
 
   var buttonPressed = false;
 
@@ -424,6 +469,7 @@ const musicians = [
     } else {
       alert('Hello again');
     }
+	
   }
 </script>
 </body>
