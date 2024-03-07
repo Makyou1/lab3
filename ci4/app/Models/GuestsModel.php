@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class GuestModel extends Model
+class GuestsModel extends Model
 {
     protected $table = 'myguests';
-	
+    
     public function getGuest($email = false)
     {
         if ($email === false) {
